@@ -3,7 +3,7 @@ body{
 }
 /*#region Ej1*/
 #ej1{
-    /* height: 50em; */
+    height: 50em;
 }
 #ej1{
     position: sticky;
@@ -111,7 +111,7 @@ body{
 
 /*#region Ej4*/
 #ej4{
-    /* height: 50em; */
+    height: 50em;
 }
 #ej4>div{
     padding-left: 2em;
@@ -149,7 +149,7 @@ body{
 
 /*#region Ej5*/
 #ej5{
-    /* height: 50em; */
+    height: 50em;
 }
 #ej5>div{
     height: 2em;
