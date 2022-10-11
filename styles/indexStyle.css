@@ -3,7 +3,7 @@ body{
 }
 /*#region Ej1*/
 #ej1{
-    /* height: 50em; */
+    /* height: 30em; */
 }
 #ej1{
     position: sticky;
@@ -46,8 +46,9 @@ body{
 
 /*#region Ej2*/
 #ej2{
-    /* height: 50em; */
+    height: 30em;
     display: flex;
+    align-items: center;
 }
 #ej2>div:nth-child(1){
     position: relative;
@@ -88,7 +89,7 @@ body{
 
 /*#region Ej3*/
 #ej3{
-    /* height: 50em; */
+    height: 30em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +112,7 @@ body{
 
 /*#region Ej4*/
 #ej4{
-    /* height: 50em; */
+    height: 30em;
 }
 #ej4>div{
     padding-left: 2em;
@@ -149,7 +150,9 @@ body{
 
 /*#region Ej5*/
 #ej5{
-    /* height: 50em; */
+    height: 30em;
+    display: flex;
+    align-items: center;
 }
 #ej5>div{
     height: 2em;
@@ -161,6 +164,7 @@ body{
 #ej5>div>p.texto{
     position: relative;
     left: 150em;
+    transition: left 2s;
 }
 #ej5>div>p.texto2{
     position: relative;
@@ -174,8 +178,9 @@ body{
     width: 20em;
     top: 5em;
 }
-#ej5>div>input:hover + p.texto{
+#ej5>div>input:hover ~ p.texto{
     left: 0;
+    transition-timing-function: ease-in-out;
 }
 #ej5>div>input:hover ~ p.texto2{
     overflow: visible;
@@ -190,13 +195,16 @@ body{
 }
 @keyframes colored{
    0%{color:black}
+   99%{color:black}
    100%{color: red;}
 }
 /*#endregion*/
 
 /*#region Ej6*/
 #ej6{
-    /* height: 50em; */
+    height: 50em;
+    display: flex;
+    align-items: center;
 }
 #ej6>section {
     width: 1000px;
@@ -214,10 +222,10 @@ body{
     background-color: brown;
 
     /* Your code here: */
-    width: 250px; 
+    width: 25%; 
     /*margin: 0px 100px;
     padding: 0 100px; Con margin no se, pero con padding si*/
-    height: 100px;
+    height: 5em;
     border: 1px solid rgba(202, 191, 29, 0.5);
 }
 
@@ -225,7 +233,9 @@ body{
 
 /*#region Ej7*/
 #ej7{
-    /* height: 50em; */
+    height: 30em;
+    display: flex;
+    align-items: center;
 }
 #ej7>section {
     width: 1000px;
@@ -255,5 +265,96 @@ body{
 /*#endregion*/
 
 /*#region Ej8*/
+#ej8{
+    /* height: 50em; */
+}
+#ej8>*{
+    border: 2px solid red;
+}
 
+@media (max-width:480px) {
+    #ej8{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    #ej8>*{
+        height: 3em;
+    }
+    #ej8>main{
+        height: 15em;
+    }
+}
+@media (min-width:481px) and (max-width:1024px) {
+    #ej8{
+        display: grid;
+        grid-template-areas: 
+        "head head"
+        "navi navi"
+        "side main"
+        "side main"
+        "ads foot";
+        gap: 15px;
+    }
+    #ej8>*{
+        height: 30px;
+    }
+    #ej8>header{
+        grid-area: head;
+    }
+    #ej8>nav{
+        grid-area: navi;
+    }
+    #ej8>article{
+        grid-area: side;
+        height: 15em;
+
+    }
+    #ej8>main{
+        height: 15em;
+        grid-area: main;
+    }
+    #ej8>aside{
+        grid-area: ads;
+    }
+    #ej8>footer{
+        grid-area: foot;
+    }
+}
+@media (min-width:1025px) {
+    #ej8{
+        display: grid;
+        grid-template-areas: 
+        "head head head"
+        "side navi ads"
+        "side main ads"
+        "side main ads"
+        "foot foot foot";
+        gap: 15px;
+    }
+    #ej8>*{
+        display: flex;
+        align-items: flex-start;
+    }
+    #ej8>header{
+        grid-area: head;
+    }
+    #ej8>nav{
+        grid-area: navi;
+    }
+    #ej8>article{
+        grid-area: side;
+
+    }
+    #ej8>main{
+        height: 15em;
+        grid-area: main;
+    }
+    #ej8>aside{
+        grid-area: ads;
+    }
+    #ej8>footer{
+        grid-area: foot;
+    }
+}
 /*#endregion*/
