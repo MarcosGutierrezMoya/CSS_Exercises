@@ -3,7 +3,7 @@ body{
 }
 /*#region Ej1*/
 #ej1{
-    height: 50em;
+    /* height: 50em; */
 }
 #ej1{
     position: sticky;
@@ -111,7 +111,7 @@ body{
 
 /*#region Ej4*/
 #ej4{
-    height: 50em;
+    /* height: 50em; */
 }
 #ej4>div{
     padding-left: 2em;
@@ -149,7 +149,7 @@ body{
 
 /*#region Ej5*/
 #ej5{
-    height: 50em;
+    /* height: 50em; */
 }
 #ej5>div{
     height: 2em;
@@ -166,7 +166,7 @@ body{
     position: relative;
     width: 20em;
     top: 5em;
-    right: 100em;
+    right: 50em;
     overflow: hidden;
 }
 #ej5>div>p.texto3{
@@ -181,26 +181,77 @@ body{
     overflow: visible;
 }
 #ej5>div>input:hover ~ p.texto3{
-    animation-name: move;
-    animation-duration: 2s;
+    animation: moves 2s linear forwards, colored 2s linear forwards;
 }
-@keyframes move {
+@keyframes moves {
     0% {right: 10em;}
     60% {right: 100em;}
-    90% {right: 100em;}
-    100% {animation: color;}
+    100% {right: 100em;}
 }
-@keyframes color{
-    100%{color: red;}
+@keyframes colored{
+   0%{color:black}
+   100%{color: red;}
 }
 /*#endregion*/
 
 /*#region Ej6*/
+#ej6{
+    /* height: 50em; */
+}
+#ej6>section {
+    width: 1000px;
+    height: fit-content;
+    margin: 3rem auto;
+    padding: 1rem 0;
+    background-color: navy;
+
+    /* Your code here: */
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+#ej6>section>div {
+    background-color: brown;
+
+    /* Your code here: */
+    width: 250px; 
+    /*margin: 0px 100px;
+    padding: 0 100px; Con margin no se, pero con padding si*/
+    height: 100px;
+    border: 1px solid rgba(202, 191, 29, 0.5);
+}
 
 /*#endregion*/
 
 /*#region Ej7*/
+#ej7{
+    /* height: 50em; */
+}
+#ej7>section {
+    width: 1000px;
+    height: 500px;
+    margin: 3rem auto;
+    background-color: navy;
 
+    /* Your code here: */
+    display: flex;
+    justify-content: space-between;
+    
+}
+#ej7>section>section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin:10px 50px;
+}
+#ej7>section>section>div {
+    /* Your code here: */
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+    border: 1px solid rgba(202, 191, 29, 0.5);
+}
 /*#endregion*/
 
 /*#region Ej8*/
