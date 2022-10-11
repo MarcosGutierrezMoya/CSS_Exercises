@@ -1,15 +1,14 @@
-body{
+body {
     margin: 0;
 }
+
 /*#region Ej1*/
-#ej1{
-    /* height: 30em; */
-}
-#ej1{
+#ej1 {
     position: sticky;
     top: 0;
 }
-#ej1>nav{
+
+#ej1>nav {
     height: 2.5em;
     background-color: black;
     display: flex;
@@ -17,16 +16,19 @@ body{
     justify-content: space-evenly;
     /* gap: 2em; */
 }
-#ej1>nav>a{
+
+#ej1>nav>a {
     text-decoration: none;
     color: white;
 }
-#ej1>nav>a:hover{
+
+#ej1>nav>a:hover {
     padding: 0.5%;
     background-color: brown;
     border-radius: 10em;
 }
-#btnTop{
+
+#btnTop {
     position: fixed;
     margin: 0;
     top: 90%;
@@ -36,29 +38,33 @@ body{
     justify-content: center;
     align-items: center; */
 }
-#btnTop>a{
+
+#btnTop>a {
     text-decoration: none;
     background-color: goldenrod;
     padding: 10%;
     border-radius: 40em;
 }
+
 /*#endregion*/
 
 /*#region Ej2*/
-#ej2{
+#ej2 {
     height: 30em;
     display: flex;
     align-items: center;
 }
-#ej2>div:nth-child(1){
+
+#ej2>div:nth-child(1) {
     position: relative;
     left: 1em;
-    height:9em;
+    height: 9em;
     width: 15em;
     background-color: white;
     border: 2px solid;
 }
-#ej2>div:nth-child(2){
+
+#ej2>div:nth-child(2) {
     position: relative;
     right: 5em;
     top: 5em;
@@ -67,7 +73,8 @@ body{
     background-color: white;
     border: 2px solid;
 }
-#ej2>div:nth-child(3){
+
+#ej2>div:nth-child(3) {
     position: relative;
     right: 24em;
     top: 13em;
@@ -76,7 +83,8 @@ body{
     background-color: white;
     border: 2px solid;
 }
-#ej2>div:nth-child(4){
+
+#ej2>div:nth-child(4) {
     position: relative;
     right: 27em;
     height: 17em;
@@ -88,19 +96,21 @@ body{
 /*#endregion*/
 
 /*#region Ej3*/
-#ej3{
+#ej3 {
     height: 30em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#ej3>main>input{
+
+#ej3>main>input {
     background-color: transparent;
     border-color: tomato;
     height: 5em;
     width: 15em;
 }
-#ej3>main>input:hover{
+
+#ej3>main>input:hover {
     background-color: transparent;
     border-color: blueviolet;
     box-shadow: 0px 0px 20px rgba(182, 27, 27, 0.8);
@@ -111,14 +121,16 @@ body{
 /*#endregion*/
 
 /*#region Ej4*/
-#ej4{
+#ej4 {
     height: 30em;
 }
-#ej4>div{
+
+#ej4>div {
     padding-left: 2em;
     cursor: pointer;
 }
-#ej4>div>div{
+
+#ej4>div>div {
     position: relative;
     background-color: black;
     border-radius: 10em;
@@ -126,86 +138,125 @@ body{
     height: 0.5em;
     top: 1em;
 }
-#ej4>div>div::after{
+
+#ej4>div>div::after {
     bottom: 1em;
-    position:absolute;
+    position: absolute;
     content: '';
     width: 5em;
     height: 0.5em;
-    background:black;
+    background: black;
     border-radius: 10em;
-    transition:0.5s;
 }
-#ej4>div>div::before{
+
+#ej4>div>div::before {
     top: 1em;
     content: '';
-    position:absolute;
+    position: absolute;
     width: 5em;
     height: 0.5em;
-    background:black;
+    background: black;
     border-radius: 10em;
-    transition:0.5s;
 }
+
+#ej4>div:checked>div::before {
+    top: 1em;
+    content: '';
+    position: absolute;
+    width: 5em;
+    height: 0.5em;
+    background: black;
+    border-radius: 10em;
+    rotate: 45deg;
+}
+
 /*#endregion*/
 
 /*#region Ej5*/
-#ej5{
+#ej5 {
     height: 30em;
     display: flex;
     align-items: center;
 }
-#ej5>div{
+
+#ej5>div {
     height: 2em;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     gap: 10em;
 }
-#ej5>div>p.texto{
+
+#ej5>div>p.texto {
     position: relative;
     left: 150em;
     transition: left 2s;
 }
-#ej5>div>p.texto2{
+
+#ej5>div>p.texto2 {
     position: relative;
     width: 20em;
     top: 5em;
     right: 50em;
     overflow: hidden;
 }
-#ej5>div>p.texto3{
+
+#ej5>div>p.texto3 {
     position: relative;
     width: 20em;
     top: 5em;
 }
-#ej5>div>input:hover ~ p.texto{
+
+#ej5>div>input:hover~p.texto {
     left: 0;
     transition-timing-function: ease-in-out;
 }
-#ej5>div>input:hover ~ p.texto2{
+
+#ej5>div>input:hover~p.texto2 {
     overflow: visible;
 }
-#ej5>div>input:hover ~ p.texto3{
+
+#ej5>div>input:hover~p.texto3 {
     animation: moves 2s linear forwards, colored 2s linear forwards;
 }
+
 @keyframes moves {
-    0% {right: 10em;}
-    60% {right: 100em;}
-    100% {right: 100em;}
+    0% {
+        right: 10em;
+    }
+
+    60% {
+        right: 100em;
+    }
+
+    100% {
+        right: 100em;
+    }
 }
-@keyframes colored{
-   0%{color:black}
-   99%{color:black}
-   100%{color: red;}
+
+@keyframes colored {
+    0% {
+        color: black
+    }
+
+    99% {
+        color: black
+    }
+
+    100% {
+        color: red;
+    }
 }
+
 /*#endregion*/
 
 /*#region Ej6*/
-#ej6{
+#ej6 {
     height: 50em;
     display: flex;
     align-items: center;
 }
+
 #ej6>section {
     width: 1000px;
     height: fit-content;
@@ -218,11 +269,12 @@ body{
     justify-content: center;
     gap: 10%;
 }
+
 #ej6>section>div {
     background-color: brown;
 
     /* Your code here: */
-    width: 25%; 
+    width: 25%;
     /*margin: 0px 100px;
     padding: 0 100px; Con margin no se, pero con padding si*/
     height: 5em;
@@ -232,11 +284,12 @@ body{
 /*#endregion*/
 
 /*#region Ej7*/
-#ej7{
+#ej7 {
     height: 30em;
     display: flex;
     align-items: center;
 }
+
 #ej7>section {
     width: 1000px;
     height: 500px;
@@ -246,15 +299,17 @@ body{
     /* Your code here: */
     display: flex;
     justify-content: space-between;
-    
+
 }
+
 #ej7>section>section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin:10px 50px;
+    margin: 10px 50px;
 }
+
 #ej7>section>section>div {
     /* Your code here: */
     width: 200px;
@@ -262,99 +317,351 @@ body{
     background-color: brown;
     border: 1px solid rgba(202, 191, 29, 0.5);
 }
+
 /*#endregion*/
 
 /*#region Ej8*/
-#ej8{
-    /* height: 50em; */
-}
-#ej8>*{
+#ej8>* {
     border: 2px solid red;
 }
 
 @media (max-width:480px) {
-    #ej8{
+    #ej8 {
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    #ej8>*{
+
+    #ej8>* {
         height: 3em;
     }
-    #ej8>main{
+
+    #ej8>main {
         height: 15em;
     }
 }
+
 @media (min-width:481px) and (max-width:1024px) {
-    #ej8{
+    #ej8 {
         display: grid;
-        grid-template-areas: 
-        "head head"
-        "navi navi"
-        "side main"
-        "side main"
-        "ads foot";
+        grid-template-areas:
+            "head head"
+            "navi navi"
+            "side main"
+            "side main"
+            "ads foot";
         gap: 15px;
     }
-    #ej8>*{
+
+    #ej8>* {
         height: 30px;
     }
-    #ej8>header{
+
+    #ej8>header {
         grid-area: head;
     }
-    #ej8>nav{
+
+    #ej8>nav {
         grid-area: navi;
     }
-    #ej8>article{
+
+    #ej8>article {
         grid-area: side;
         height: 15em;
 
     }
-    #ej8>main{
+
+    #ej8>main {
         height: 15em;
         grid-area: main;
     }
-    #ej8>aside{
+
+    #ej8>aside {
         grid-area: ads;
     }
-    #ej8>footer{
+
+    #ej8>footer {
         grid-area: foot;
     }
 }
+
 @media (min-width:1025px) {
-    #ej8{
+    #ej8 {
         display: grid;
-        grid-template-areas: 
-        "head head head"
-        "side navi ads"
-        "side main ads"
-        "side main ads"
-        "foot foot foot";
+        grid-template-areas:
+            "head head head"
+            "side navi ads"
+            "side main ads"
+            "side main ads"
+            "foot foot foot";
         gap: 15px;
     }
-    #ej8>*{
+
+    #ej8>* {
         display: flex;
         align-items: flex-start;
     }
-    #ej8>header{
+
+    #ej8>header {
         grid-area: head;
     }
-    #ej8>nav{
+
+    #ej8>nav {
         grid-area: navi;
     }
-    #ej8>article{
+
+    #ej8>article {
         grid-area: side;
 
     }
-    #ej8>main{
+
+    #ej8>main {
         height: 15em;
         grid-area: main;
     }
-    #ej8>aside{
+
+    #ej8>aside {
         grid-area: ads;
     }
-    #ej8>footer{
+
+    #ej8>footer {
         grid-area: foot;
     }
 }
+
+/*#endregion*/
+
+/*#region miniP1*/
+#mini1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    background-color: antiquewhite;
+}
+
+#mini1>div {
+    position: absolute;
+    height: 15%;
+    width: 7%;
+    background-color: lightblue;
+    background-image: url(../img/marca.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2em;
+    padding: 1em;
+}
+
+#mini1>div>article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    top: 6em;
+    transition: top 2s, transform 2s;
+}
+
+#mini1>div>article>p {
+    margin: 0;
+    opacity: 0%;
+    transition: opacity 1s;
+}
+
+#mini1>div>article>div {
+    position: relative;
+    height: 0.3em;
+    width: 4em;
+    border-radius: 5em;
+    bottom: 0.8em;
+    left: 10em;
+    opacity: 0%;
+    background-color: blueviolet;
+    transition: left 1s, opacity 1s;
+}
+
+#mini1>div>article>h3 {
+    margin: 0;
+}
+
+#mini1>div:hover {
+    background-size: contain;
+    box-shadow: 0px 0px 20px rgba(182, 27, 27, 0.8);
+}
+
+#mini1>div:hover>article {
+    position: relative;
+    top: 1em;
+    transition-delay: 1s;
+    transition: top 2s, transform 2s;
+}
+
+#mini1>div:hover #text {
+    opacity: 100%;
+    transition: opacity 2s;
+    background-color: white;
+}
+
+#mini1>div:hover #tittle {
+    color: darkmagenta;
+}
+
+#mini1>div:hover #line {
+    left: 0;
+    opacity: 100%;
+    transition: left 1s, opacity 1s;
+}
+
+/*#endregion*/
+
+/*#region miniP2*/
+#cuerpo {
+    background-color: #60A9FF;
+    padding: 5%;
+}
+
+
+
+/*media queries*/
+@media (min-width:1025px) {
+    #head {
+        margin: 0;
+    }
+    
+    #head>section {
+        background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 0.7em;
+        margin:0 20%;
+        padding: 3% 0;
+    }
+    
+    #head>section>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        gap: 1em;
+    }
+    
+    #head>section>div>* {
+        margin: 0;
+    }
+    
+    #head>section>div>img {
+        width: 95%;
+    }
+    
+    #head>section>div>ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0;
+        gap: 1em;
+    }
+    
+    #head>section>div>ul>li {
+        color: #016ff9;
+        border-top: 1px solid #e1f1ff;
+        font-size: 1.2rem;
+        padding: 10% 0;
+        width: 10rem;
+        text-align: center;
+        list-style: none;
+    }
+    
+    #head>section>div>span {
+        border-top: 1px solid #e1f1ff;
+        padding-top: 10%;
+        width: 10rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: blue;
+    }
+    
+    #head>section>div>a {
+        text-decoration: none;
+        border: 0.5px solid cornflowerblue;
+        border-radius: 1em;
+        padding: 3% 5%;
+    }
+}
+
+@media (min-width:481px) and (max-width:1024px){
+    #head {
+        margin: 0;
+    }
+    
+    #head>section {
+        background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 0.7em;
+        margin: 0;
+        padding: 3% 0;
+        gap: 2em;
+    }
+    
+    #head>section>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        gap: 1em;
+    }
+    
+    #head>section>div>* {
+        margin: 0;
+    }
+    
+    #head>section>div>img {
+        width: 95%;
+    }
+    
+    #head>section>div>ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0;
+        gap: 1em;
+    }
+    
+    #head>section>div>ul>li {
+        color: #016ff9;
+        border-top: 1px solid #e1f1ff;
+        font-size: 1.2rem;
+        padding: 10% 0;
+        width: 10rem;
+        text-align: center;
+        list-style: none;
+    }
+    
+    #head>section>div>span {
+        border-top: 1px solid #e1f1ff;
+        padding-top: 10%;
+        width: 10rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: blue;
+    }
+    
+    #head>section>div>a {
+        text-decoration: none;
+        border: 0.5px solid cornflowerblue;
+        border-radius: 1em;
+        padding: 3% 5%;
+    }
+
+}
+
 /*#endregion*/
