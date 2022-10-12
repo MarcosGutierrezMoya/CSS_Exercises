@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@media (max-width:600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 2rem;
+    }
+    h1{
+        width: 30rem;
+    }
+    body>article{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    body>article>section{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 30rem;
+    }
+    #listaTitulo{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #listaTexto{
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width:601px) and (max-width:1200px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+    }
+    h1{
+        width: 30rem;
+    }
+    article{
+        display: grid;
+        grid-template-areas:
+        "first second"
+        "first third";
+        gap: 0.5rem;
+    }
+    #first{
+        grid-area: first;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 15rem;
+    }
+    #second{
+        grid-area: second;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 40rem;
+    }
+    #third{
+        grid-area: third;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #first>ul>li{
+        margin-left: 2.5rem;
+    }
+    #third>ul{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+    }
+    #third>ul>li{
+        width: 12rem;
+    }
+}
+
+@media (min-width:1201px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:3rem;
+        gap: 2rem;
+    }
+    article{
+        display: flex;
+        gap: 1rem;
+    }
+    article>section{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 22rem;
+    }
+    ul{
+        padding-left: 2rem;
+    }
+}
